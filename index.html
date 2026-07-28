@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Password Strength Analyzer</h1>
+            <p>Check the security strength of your password</p>
+        </div>
+
+        <div class="input-section">
+
+            <label for="password">Enter your password</label>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter a password..."
+                >
+
+                <button id="toggleButton" onclick="togglePassword()">
+                    Show
+                </button>
+
+            </div>
+
+            <button class="analyze-button" onclick="analyzePassword()">
+                Analyze Password
+            </button>
+
+        </div>
+
+
+        <div class="result-section">
+
+            <h2 id="strengthResult">
+                Strength: -
+            </h2>
+
+            <p id="scoreResult">
+                Security Score: 0/5
+            </p>
+
+            <div class="strength-bar">
+                <div id="strengthProgress"></div>
+            </div>
+
+        </div>
+
+
+        <div class="checks-section">
+
+            <h2>Security Checks</h2>
+
+            <div id="lengthCheck" class="check">
+                - At least 8 characters
+            </div>
+
+            <div id="uppercaseCheck" class="check">
+                - Contains uppercase letter
+            </div>
+
+            <div id="lowercaseCheck" class="check">
+                - Contains lowercase letter
+            </div>
+
+            <div id="numberCheck" class="check">
+                - Contains a number
+            </div>
+
+            <div id="specialCheck" class="check">
+                - Contains special character
+            </div>
+
+        </div>
+
+
+        <div class="suggestions-section">
+
+            <h2>Suggestions</h2>
+
+            <div id="suggestions">
+                Enter a password to see suggestions.
+            </div>
+
+        </div>
+
+
+        <button class="clear-button" onclick="clearAll()">
+            Clear
+        </button>
+
+
+        <div class="footer">
+            <p>Password Strength Analyzer | Cybersecurity Mini Project</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
